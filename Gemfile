@@ -42,7 +42,7 @@ group :development do
 end
 # NCBO gems (can be from a local dev path or from rubygems/git)
 gem 'goo', github: 'ontoportal-lirmm/goo', branch: 'development'
-gem 'sparql-client', github: 'ontoportal-lirmm/sparql-client', branch: 'development'
+gem 'sparql-client', github: 'muhammedBkf/sparql-client', branch: 'add-digest-authentication'
 
 gem 'net-ftp'
 gem 'public_suffix', '~> 5.1.1'

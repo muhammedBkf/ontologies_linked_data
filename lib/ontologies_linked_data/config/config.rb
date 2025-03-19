@@ -22,7 +22,7 @@ module LinkedData
     @settings.goo_backend_name              ||= '4store'
     @settings.goo_port                      ||= 9000
     @settings.goo_host                      ||= 'localhost'
-    @settings.goo_path_query                ||= '/sparql/'
+    @settings.goo_path_query                ||= '/sparql-auth/'
     @settings.goo_path_data                 ||= '/data/'
     @settings.goo_path_update               ||= '/update/'
     @settings.search_server_url             ||= 'http://localhost:8983/solr'
@@ -103,6 +103,9 @@ module LinkedData
 
     # number of threads to use when indexing a single ontology for search
     @settings.indexing_num_threads          ||= 1
+    @settings.use_digest_auth       ||= true
+    @settings.db_pass               ||= 'Ontoportal'
+    @settings.db_user               ||= 'Ontoportal'
 
     # Override defaults
     yield @settings, overide_connect_goo if block_given?
